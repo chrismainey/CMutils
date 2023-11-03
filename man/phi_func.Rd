@@ -17,3 +17,7 @@ A numeric phi value
 \description{
 Internal function to perform the transformations for data types.
 }
+\examples{
+phi_func(3, c(1.3,0.75, 1.5))
+
+}

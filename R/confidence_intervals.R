@@ -6,7 +6,7 @@
 #'
 #' @param o observed or numerator value
 #' @param n expected or denominator value
-#' @param ci confidence interval coverage required.  Default is 0.95 for 95% confidence interval
+#' @param ci confidence interval coverage required.  Default is 0.95 for 95\% confidence interval
 #'
 #' @return A vector o/n, lower confidence interval limit, and upper confidence interval limit
 #' @export
@@ -30,13 +30,12 @@ prop_ci <- function(o, n, ci=0.95){
 
 #' Byar's confidence interval
 #'
-#' @description
-#' Byar's confidence interval fro counts, crude rates or indirectly standardised ratios
+#' @description Byar's confidence interval fro counts, crude rates or indirectly standardised ratios
 #'
 #'
 #' @param o observed or numerator value
 #' @param n expected or denominator value
-#' @param ci confidence interval coverage required.  Default is 0.95 for 95% confidence interval
+#' @param ci confidence interval coverage required.  Default is 0.95 for 95\% confidence interval
 #'
 #' @return A vector o/n, lower confidence interval limit, and upper confidence interval limit
 #' @export
@@ -61,9 +60,13 @@ byars_ci <- function(o, n, ci=0.95){
 
 #' Exact Poisson limit for an SMR / small count (Ulm)
 #'
+#' @description Exact poisson limit used for small counts and SMRs, based on Poisson distribution.
+#' This uses Ulm's method, exploiting the link to the chisq distribution.  This approach is used for un adjusted
+#' limits in the FunnelPlotR package.
+#'
 #' @param o observed or numerator value
 #' @param n expected or denominator value
-#' @param ci confidence interval coverage required.  Default is 0.95 for 95% confidence interval
+#' @param ci confidence interval coverage required.  Default is 0.95 for 95\% confidence interval
 #'
 #' @return A vector o/n, lower confidence interval limit, and upper confidence interval limit
 #' @export

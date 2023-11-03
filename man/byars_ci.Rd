@@ -11,7 +11,7 @@ byars_ci(o, n, ci = 0.95)
 
 \item{n}{expected or denominator value}
 
-\item{ci}{confidence interval coverage required.  Default is 0.95 for 95% confidence interval}
+\item{ci}{confidence interval coverage required.  Default is 0.95 for 95\% confidence interval}
 }
 \value{
 A vector o/n, lower confidence interval limit, and upper confidence interval limit

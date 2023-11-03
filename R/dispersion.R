@@ -32,8 +32,9 @@ disp_ratio<-function(model, ...){
 #'
 #' @return A numeric phi value
 #'
-#' @example
+#' @examples
 #' phi_func(3, c(1.3,0.75, 1.5))
+#'
 phi_func <- function(n, zscores){
   phi <- (1 / n) * sum(zscores^2)
 
