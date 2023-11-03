@@ -9,7 +9,7 @@ disp_ratio(model, ...)
 \arguments{
 \item{model}{a fitted regression model object that has a relevant pearson residual to be extracted}
 
-\item{...}{}
+\item{...}{dots}
 }
 \value{
 A dispersion ratio, where 1 is equidispersion (as expected), > 1 is over-dispersion and <1 is under-dispersion
@@ -24,5 +24,5 @@ data(LOS_model)
 
 mod1 <- glm(Death ~ Age * LOS, data=LOS_model, family="binomial")
 
-disp_ration(mod1)
+disp_ratio(mod1)
 }

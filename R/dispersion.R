@@ -5,7 +5,7 @@
 #'
 #'
 #' @param model a fitted regression model object that has a relevant pearson residual to be extracted
-#' @param ...
+#' @param ... dots
 #'
 #' @return A dispersion ratio, where 1 is equidispersion (as expected), > 1 is over-dispersion and <1 is under-dispersion
 #' @export
@@ -18,7 +18,7 @@
 #'
 #' mod1 <- glm(Death ~ Age * LOS, data=LOS_model, family="binomial")
 #'
-#' disp_ration(mod1)
+#' disp_ratio(mod1)
 disp_ratio<-function(model, ...){
   sum(residuals(model, type="pearson")^2) / df.residual(model)
 }
@@ -33,6 +33,7 @@ disp_ratio<-function(model, ...){
 #' @param zscores Vector of z-scores z-scores to be used.  Commonly, this might be 'winsorised' first to remove impact of extreme outliers.
 #'
 #' @return A numeric phi value
+#' @export
 #'
 #' @examples
 #' phi_func(3, c(1.3,0.75, 1.5))
@@ -52,6 +53,8 @@ phi_func <- function(n, zscores){
 #' @param n The number of groups for data items, e.g. hospitals trusts that z-scores are calculated at.
 #' @param phi The dispersion ratio, where > 1 means overdispersion
 #' @param S Standard error (within cluster, calculated in z-score process)
+#'
+#' @export
 #'
 #' @return A numeric Tau2 (between group variance) value
 #'
