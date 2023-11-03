@@ -10,6 +10,8 @@
 #' @return A dispersion ratio, where 1 is equidispersion (as expected), > 1 is over-dispersion and <1 is under-dispersion
 #' @export
 #'
+#' @importFrom stats glm df.residual residuals
+#'
 #' @examples
 #' library(NHSRdatasets)
 #' data(LOS_model)

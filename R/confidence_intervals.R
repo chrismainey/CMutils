@@ -11,6 +11,8 @@
 #' @return A vector o/n, lower confidence interval limit, and upper confidence interval limit
 #' @export
 #'
+#' @importFrom stats qnorm
+#'
 #' @examples
 #' prop_ci(50,120)
 prop_ci <- function(o, n, ci=0.95){
@@ -39,6 +41,8 @@ prop_ci <- function(o, n, ci=0.95){
 #'
 #' @return A vector o/n, lower confidence interval limit, and upper confidence interval limit
 #' @export
+#'
+#' @importFrom stats qnorm
 #'
 #' @examples
 #' byars_ci(50, 120)
@@ -70,6 +74,8 @@ byars_ci <- function(o, n, ci=0.95){
 #'
 #' @return A vector o/n, lower confidence interval limit, and upper confidence interval limit
 #' @export
+#'
+#' @importFrom stats qnorm qchisq
 #'
 #' @examples
 #' # For a rate of 50 / 100
