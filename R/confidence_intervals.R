@@ -50,9 +50,9 @@ byars_ci <- function(o, n, ci=0.95){
 
   z <- qnorm(ci + ((1-ci)/2))
 
-  olower <- o * ( 1 - (1/(9*o)) - (z / (3 * sqrt(o)))^3)
+  olower <- o * ( 1 - (1/(9*o)) - (z / (3 * sqrt(o))))^3
 
-  oupper <- (o+1) * ( 1 - (1/(9*(o+1))) - (z / (3 * sqrt((o+1))))^3)
+  oupper <- (o+1) * ( 1 - (1/(9*(o+1))) - (z / (3 * sqrt((o+1)))))^3
 
   return(c(o/n,olower/n, oupper/n))
 
